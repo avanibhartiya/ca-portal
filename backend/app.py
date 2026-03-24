@@ -10,7 +10,7 @@ CORS(app)
 def home():
     return "CA Portal Backend Running 🚀"
 
-# 🔐 LOGIN API
+#LOGIN API
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -23,7 +23,7 @@ def login():
     else:
         return jsonify({"message": "Invalid credentials"}), 401
     
-# 📈 CAPITAL GAIN CALCULATOR API
+#CAPITAL GAIN CALCULATOR API
 @app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.json

@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>CA Portal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Capital Gain Calculator</h2>
+<!-- HEADER -->
+<div class="header">
+    <h2>CA Portal Dashboard</h2>
+</div>
 
-<input id="purchase_cost" placeholder="Purchase Cost"><br>
-<input id="purchase_year" placeholder="Purchase Year"><br>
+<!-- MAIN LAYOUT -->
+<div class="main">
 
-<input id="sale_value" placeholder="Sale Value"><br>
-<input id="stamp_duty_value" placeholder="Stamp Duty Value"><br>
-<input id="sale_year" placeholder="Sale Year"><br>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>Tools</h3>
+        <ul>
+            <li onclick="loadFeature('home')">🏠 Home</li>
+            <li onclick="loadFeature('capital')">💰 Capital Gain</li>
+            <li onclick="loadFeature('gst')">🧾 GST Calculator</li>
+            <li onclick="loadFeature('tax')">📊 Income Tax</li>
+            <li onclick="loadFeature('normal')">🧮 Normal Calculator</li>
+        </ul>
+    </div>
 
-<input id="improvement_cost" placeholder="Improvement Cost"><br>
-<input id="improvement_year" placeholder="Improvement Year"><br>
+    <!-- CONTENT AREA -->
+    <div class="content" id="content">
 
-<input id="expenses" placeholder="Expenses"><br><br>
+        <!-- Default Home Screen -->
+        <h2>Welcome to CA Portal</h2>
+        <p>Select a tool from the left panel to begin.</p>
 
-<button onclick="calculate()">Calculate</button>
+        <br>
 
-<h3 id="result"></h3>
+        <div class="home-cards">
+            <p>✔ Capital Gain Calculator</p>
+            <p>✔ GST Calculator (Coming Soon)</p>
+            <p>✔ Income Tax Calculator (Coming Soon)</p>
+            <p>✔ Normal Calculator (Coming Soon)</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 CA Portal | Built by You 🚀</p>
+</div>
 
 <script src="script.js"></script>
 

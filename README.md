@@ -29,9 +29,8 @@ Future enhancements:
 ---
 
 ## 📂 Project Structure
-backend/ → Flask backend
-frontend/ → UI
-
+- Backend : Flask
+- Frontend : User Interface
 
 ---
 

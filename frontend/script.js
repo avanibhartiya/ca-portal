@@ -44,3 +44,53 @@ function calculate() {
             `Tax Old: ${result.tax_old}, Tax New: ${result.tax_new}, Best: ${result.better_option}`;
     });
 }
+
+function loadFeature(feature) {
+
+    let html = "";
+
+    if (feature === "capital") {
+        html = `
+            <h2>Capital Gain Calculator</h2>
+
+            <input id="purchase_cost" placeholder="Purchase Cost">
+            <input id="purchase_year" placeholder="Purchase Year">
+
+            <input id="sale_value" placeholder="Sale Value">
+            <input id="stamp_duty_value" placeholder="Stamp Duty Value">
+            <input id="sale_year" placeholder="Sale Year">
+
+            <input id="improvement_cost" placeholder="Improvement Cost">
+            <input id="improvement_year" placeholder="Improvement Year">
+
+            <input id="expenses" placeholder="Expenses">
+
+            <button onclick="calculate()">Calculate</button>
+
+            <div id="result"></div>
+        `;
+    }
+
+    else if (feature === "gst") {
+        html = `
+            <h2>GST Calculator</h2>
+            <p>Coming Soon...</p>
+        `;
+    }
+
+    else if (feature === "tax") {
+        html = `
+            <h2>Income Tax Calculator</h2>
+            <p>Coming Soon...</p>
+        `;
+    }
+
+    else if (feature === "normal") {
+        html = `
+            <h2>Normal Calculator</h2>
+            <p>Coming Soon...</p>
+        `;
+    }
+
+    document.getElementById("content").innerHTML = html;
+}
