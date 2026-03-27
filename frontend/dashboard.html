@@ -9,7 +9,34 @@
 
 <!-- HEADER -->
 <div class="header">
-    <h2>CA Portal Dashboard</h2>
+    <!-- LEFT: Logo + Title -->
+    <div class="header-left">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <div class="title-box">
+        <h2>CA Sahayak</h2>
+        <p id="financialYear" class="fy-text"></p>
+    </div>
+    </div>
+
+    <!-- CENTER: Search Bar -->
+    <div class="header-center">
+    <input type="text" placeholder="Search tools here: " id="searchBar" onkeyup="showSuggestions()">
+    <div id="suggestionsBox" class="suggestions"></div>
+    </div>
+
+    <!-- RIGHT: User Info -->
+    <div class="header-right">
+
+    <div class="user-menu">
+        <span class="username" onclick="toggleDropdown()">Hello, User!</span>
+
+        <div class="dropdown" id="userDropdown">
+            <p onclick="openProfile()">Profile</p>
+            <p onclick="openSettings()">Settings</p>
+            <p onclick="logout()">Logout</p>
+        </div>
+    </div>
+    </div>
 </div>
 
 <!-- MAIN LAYOUT -->
