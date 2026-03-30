@@ -61,18 +61,18 @@ function loadFeature(feature) {
             <h2>Capital Gain Calculator</h2>
 
             <input id="purchase_cost" placeholder="Purchase Cost">
-            <input id="purchase_year" placeholder="Purchase Year">
+            <input id="purchase_year" placeholder="Purchase Year eg: 2010-11">
 
             <input id="sale_value" placeholder="Sale Value">
             <input id="stamp_duty_value" placeholder="Stamp Duty Value">
             <input id="sale_year" placeholder="Sale Year">
 
             <input id="improvement_cost" placeholder="Improvement Cost">
-            <input id="improvement_year" placeholder="Improvement Year">
+            <input id="improvement_year" placeholder="Improvement Year eg: 2010-11">
 
             <input id="expenses" placeholder="Expenses">
 
-            <button onclick="calculate()">Calculate</button>
+            <button onclick="calculate()">Calculate</button>    
 
             <div id="result"></div>
         `;
@@ -88,13 +88,6 @@ function loadFeature(feature) {
     else if (feature === "tax") {
         html = `
             <h2>Income Tax Calculator</h2>
-            <p>Coming Soon...</p>
-        `;
-    }
-
-    else if (feature === "normal") {
-        html = `
-            <h2>Normal Calculator</h2>
             <p>Coming Soon...</p>
         `;
     }
