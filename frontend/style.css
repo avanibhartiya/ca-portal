@@ -156,6 +156,14 @@ label {
 .suggestions div:hover {
     background-color: #f0f0f0;
 }
+.step select {
+    display: block;
+    width: 92%;
+    margin: 10px auto;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
 /* RIGHT */
 .header-right {

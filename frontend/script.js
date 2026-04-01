@@ -61,14 +61,23 @@ function loadFeature(feature) {
             <h2>Capital Gain Calculator</h2>
 
             <input id="purchase_cost" placeholder="Purchase Cost">
-            <input id="purchase_year" placeholder="Purchase Year eg: 2010-11">
+            <select id="purchase_year">
+            <option value="">Select Purchase Year</option>
+            ${generateFYOptions()}
+            </select>
 
             <input id="sale_value" placeholder="Sale Value">
             <input id="stamp_duty_value" placeholder="Stamp Duty Value">
-            <input id="sale_year" placeholder="Sale Year">
+            <select id="sale_year">
+                <option value="">Select Sale Year</option>
+                ${generateFYOptions()}
+            </select>
 
             <input id="improvement_cost" placeholder="Improvement Cost">
-            <input id="improvement_year" placeholder="Improvement Year eg: 2010-11">
+            <select id="improvement_year">
+                <option value="">Select Improvement Year</option>
+                ${generateFYOptions()}
+            </select>
 
             <input id="expenses" placeholder="Expenses">
 
@@ -190,3 +199,15 @@ function setFinancialYear() {
 window.onload = function() {
     setFinancialYear();
 };
+
+function generateFYOptions() {
+    let options = "";
+
+    for (let year = 2001; year <= 2026; year++) {
+        let nextYear = String(year + 1).slice(2);
+        let fy = `${year}-${nextYear}`;
+        options += `<option value="${fy}">${fy}</option>`;
+    }
+
+    return options;
+}
